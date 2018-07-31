@@ -5,7 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class FileProcessor {
+public class FileProcessor 
+{
 	private BufferedReader reader;
 	private String file = "C:/Users/jimitmody/Documents/Jimit/wordCount/src/Input.txt";
 	File File1 = new File(file);
@@ -38,5 +39,4 @@ public class FileProcessor {
 		}
 		return null;
 	}
-	
 }

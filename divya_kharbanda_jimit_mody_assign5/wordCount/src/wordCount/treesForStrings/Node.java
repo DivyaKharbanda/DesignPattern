@@ -44,7 +44,6 @@ public class Node implements ObserverI, SubjectI
 		this.observers = observers;
 	}
 	
-
 	public ArrayList<String> getWords() {
 		return words;
 	}
@@ -68,16 +67,19 @@ public class Node implements ObserverI, SubjectI
 	public void setRight(Node right) {
 		this.right = right;
 	}
-	
+
 	@Override
 	public void register(ObserverI obj) {
-		// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void remove(ObserverI obj) {
 		// TODO Auto-generated method stub
+		
 	}
+
 	@Override
 	public void notify(String update) {
 		if(observers == null){
@@ -98,5 +100,4 @@ public class Node implements ObserverI, SubjectI
 	public void update(String update) {
 		addWords(update);		
 	}
-
 }
