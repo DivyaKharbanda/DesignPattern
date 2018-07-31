@@ -1,6 +1,6 @@
 package wordCount.driver;
 
-import wordCount.driver.modules.insertingValuesInTreeModule1;
+import wordCount.modules.insertingValuesInTreeModule1;
 
 public class Driver 
 {

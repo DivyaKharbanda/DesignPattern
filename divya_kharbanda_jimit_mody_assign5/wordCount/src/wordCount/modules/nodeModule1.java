@@ -1,4 +1,4 @@
-package wordCount.driver.modules;
+package wordCount.modules;
 
 public class nodeModule1 
 {

@@ -1,4 +1,4 @@
-package wordCount.driver.modules;
+package wordCount.modules;
 
 import java.io.FileNotFoundException;
 import wordCount.util.FileProcessor;
