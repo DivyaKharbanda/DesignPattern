@@ -10,7 +10,9 @@ public class insertingValuesInTreeModule1
 	String data; 
 	nodeModule1 root;
 	String returnString;
+	int count =0;
 	
+
 	public void fillTree(String input)
 	{
 		try 
@@ -48,14 +50,22 @@ public class insertingValuesInTreeModule1
 	{
 		root = addRecursive(root, value);
 	}
-	
-	public void traverseInOrder(nodeModule1 node)
+	/*public void traverseInOrder(nodeModule1 root)
 	{
-		if(node != null)
+		if(root != null)
 		{
-			traverseInOrder(node.left);
-			System.out.println(" "+node.value);
-			traverseInOrder(node.right);
+			traverseInOrder(root.left);
+			count = count+1;
+			System.out.println(" "+root.value+" "+count);
+			traverseInOrder(root.right);
 		}
 	}
+
+	public String write() 
+	{
+		returnString = "";
+		traverseInOrder(root);
+		return returnString;
+	}*/
+
 }
