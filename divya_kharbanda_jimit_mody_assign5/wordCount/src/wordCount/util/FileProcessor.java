@@ -30,6 +30,7 @@ public class FileProcessor
 					{
 						String line;
 						line = input.next();
+						System.out.println("line is:"+line);
 						return line;
 					}
 			}

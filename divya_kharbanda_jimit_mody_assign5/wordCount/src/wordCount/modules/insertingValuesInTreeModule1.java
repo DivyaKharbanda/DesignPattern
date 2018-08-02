@@ -10,11 +10,12 @@ public class insertingValuesInTreeModule1
 	String data; 
 	nodeModule1 root;
 	String returnString;
-	int count =0;
-	 int countChar=0;
-		String temp;
-		char number;
-
+	int count =0 , countValues =0;
+	int countChar=0;
+	String temp;
+	char number;
+	int tempCount=0;
+	
 	public void fillTree(String input)
 	{
 		try 
@@ -44,6 +45,13 @@ public class insertingValuesInTreeModule1
 		else if (value.compareTo(current.value) > 0)
 		{
 			current.right = addRecursive(current.right, value);
+		}
+		else if (value.compareTo(current.value) == 0)
+		{
+			tempCount = tempCount+1;
+			current.setCountDuplicates(current.getCountDuplicates() + 1);
+			//System.out.println("duplicate:"+(current.getCountDuplicates()+1)+"temp:"+tempCount);
+			return current;
 		}
 		return current;	
 	}

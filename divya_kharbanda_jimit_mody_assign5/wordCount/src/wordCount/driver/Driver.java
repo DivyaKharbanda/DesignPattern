@@ -17,7 +17,9 @@ public class Driver
 		checkStrategy countWords = new CountNumberOfWords(module1);
 		checkStrategy countCharacters = new countNumberOfCharacters(module1);
 		checkStrategy countDistinctWords = new CounterNumberOfDistinctWords(module1);
+		
 		countWords.check();
 		countCharacters.check();
+		countDistinctWords.check();
 	}
 }

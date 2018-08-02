@@ -2,9 +2,9 @@ package wordCount.modules;
 
 public class CountNumberOfWords implements checkStrategy
 {
-	//nodeModule1 root;
 	String returnString;
 	int count;
+	int temp;
 	
 	insertingValuesInTreeModule1 in;
 	public CountNumberOfWords(insertingValuesInTreeModule1 module1) 
@@ -16,7 +16,7 @@ public class CountNumberOfWords implements checkStrategy
 	public void check() 
 	{
 		write();
-		System.out.println("Total number of words in Tree are: "+count);
+		System.out.println("Total number of words in Tree are: "+(count+in.tempCount));
 	}
 	public int traverseInOrder(nodeModule1 root)
 	{
@@ -24,7 +24,7 @@ public class CountNumberOfWords implements checkStrategy
 		{
 			traverseInOrder(root.left);
 			count = count+1;
-			System.out.println(" "+root.value);
+			System.out.println(" "+root.value+" "+(root.getCountDuplicates()+1));
 			traverseInOrder(root.right);
 		}
 		return count;
