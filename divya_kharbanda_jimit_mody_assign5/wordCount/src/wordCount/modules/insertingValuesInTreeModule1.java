@@ -11,7 +11,9 @@ public class insertingValuesInTreeModule1
 	nodeModule1 root;
 	String returnString;
 	int count =0;
-	
+	 int countChar=0;
+		String temp;
+		char number;
 
 	public void fillTree(String input)
 	{
@@ -50,22 +52,5 @@ public class insertingValuesInTreeModule1
 	{
 		root = addRecursive(root, value);
 	}
-	/*public void traverseInOrder(nodeModule1 root)
-	{
-		if(root != null)
-		{
-			traverseInOrder(root.left);
-			count = count+1;
-			System.out.println(" "+root.value+" "+count);
-			traverseInOrder(root.right);
-		}
-	}
-
-	public String write() 
-	{
-		returnString = "";
-		traverseInOrder(root);
-		return returnString;
-	}*/
 
 }
