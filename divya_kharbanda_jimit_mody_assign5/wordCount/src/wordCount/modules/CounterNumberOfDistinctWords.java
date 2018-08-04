@@ -12,6 +12,7 @@ public class CounterNumberOfDistinctWords implements checkStrategy
 	DebugLevel Distinct;
 	String message;
 	
+	// here we are counting the distinct number of words in the tree
 	public CounterNumberOfDistinctWords(insertingValuesInTreeModule1 module1) 
 	{
 		this.module1 = module1;

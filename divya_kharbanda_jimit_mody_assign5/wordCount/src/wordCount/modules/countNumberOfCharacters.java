@@ -29,6 +29,8 @@ public class countNumberOfCharacters implements checkStrategy
 		message = "Number of Characters are: "+countChar;
 		Logger.writeMessage(message, Characters);
 	}
+	
+	// here we are counting the total of number of characters in the tree
 	public void traverseInOrderCountCharacter(nodeModule1 root)
 	{
 		if(root != null)

@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import wordCount.util.FileProcessor;
 
 //Reference for insertion in Tree is taken from:
-//http://www.baeldung.com/java-binary-tree
+//	http://www.baeldung.com/java-binary-tree
 
 public class insertingValuesInTreeModule1 
 {
@@ -17,6 +17,8 @@ public class insertingValuesInTreeModule1
 	String temp;
 	char number;
 	int tempCount=0;
+	
+	// insertion of values in tree are done here
 	
 	public void fillTree(String input)
 	{
