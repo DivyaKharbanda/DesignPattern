@@ -54,6 +54,7 @@ public class Driver
 							countDistinctWords.check();
 						
 							System.setOut(console);	
+							ps.close();
 					}
 					catch (FileNotFoundException e) 
 					{
