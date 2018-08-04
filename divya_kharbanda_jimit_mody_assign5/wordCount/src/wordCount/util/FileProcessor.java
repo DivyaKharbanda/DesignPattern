@@ -26,8 +26,18 @@ public class FileProcessor
 		String file = file_name;
 		if (i == 1) 
 		{
-			input = new Scanner(new File(file));
-			i++;
+
+			if(new File(file).isFile())
+			{
+				input = new Scanner(new File(file));
+				i++;
+			}
+			else
+			{
+				message="Arguement 1 should be input file";
+				Logger.writeMessage(message, FILE_PROCESSOR);
+				System.exit(0);
+			}
 		}
 			try 
 			{
