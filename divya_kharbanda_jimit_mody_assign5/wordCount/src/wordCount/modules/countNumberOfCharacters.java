@@ -1,17 +1,22 @@
 package wordCount.modules;
 
+import wordCount.util.Logger;
+import wordCount.util.Logger.DebugLevel;
+
 public class countNumberOfCharacters implements checkStrategy
 {
 	insertingValuesInTreeModule1 module1;
 	int countChar=0;
 	String temp;
 	char number;
+	DebugLevel Characters;
+	String message;
 	
 	public countNumberOfCharacters(insertingValuesInTreeModule1 module12) 
 	{
 		module1 = module12;
 	}
-
+	
 	@Override
 	public void check() 
 	{
@@ -21,7 +26,8 @@ public class countNumberOfCharacters implements checkStrategy
 	{
 		temp ="";
 		traverseInOrderCountCharacter(module1.root);
-		System.out.println("Number of Characters are: "+countChar);
+		message = "Number of Characters are: "+countChar;
+		Logger.writeMessage(message, Characters);
 	}
 	public void traverseInOrderCountCharacter(nodeModule1 root)
 	{

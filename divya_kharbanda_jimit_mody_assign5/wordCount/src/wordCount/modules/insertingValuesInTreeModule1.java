@@ -3,7 +3,9 @@ package wordCount.modules;
 import java.io.FileNotFoundException;
 import wordCount.util.FileProcessor;
 
+//Reference for insertion in Tree is taken from:
 //http://www.baeldung.com/java-binary-tree
+
 public class insertingValuesInTreeModule1 
 {
 	FileProcessor fp = new FileProcessor();
@@ -50,7 +52,6 @@ public class insertingValuesInTreeModule1
 		{
 			tempCount = tempCount+1;
 			current.setCountDuplicates(current.getCountDuplicates() + 1);
-			//System.out.println("duplicate:"+(current.getCountDuplicates()+1)+"temp:"+tempCount);
 			return current;
 		}
 		return current;	

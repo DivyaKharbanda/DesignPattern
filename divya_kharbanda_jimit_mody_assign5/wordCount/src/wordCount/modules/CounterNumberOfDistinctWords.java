@@ -1,11 +1,16 @@
 package wordCount.modules;
 
+import wordCount.util.Logger;
+import wordCount.util.Logger.DebugLevel;
+
 public class CounterNumberOfDistinctWords implements checkStrategy
 {
 	insertingValuesInTreeModule1 module1;
 	String returnString;
 	String temp;
 	int countDistint;
+	DebugLevel Distinct;
+	String message;
 	
 	public CounterNumberOfDistinctWords(insertingValuesInTreeModule1 module1) 
 	{
@@ -20,16 +25,18 @@ public class CounterNumberOfDistinctWords implements checkStrategy
 	public void countDistict()
 	{
 		temp ="";
-		traverseInOrderCountCharacter(module1.root);
-		System.out.println("Number of Distinct words are: "+countDistint);
+		traverseInOrderCountDistinct(module1.root);
+		message = "Number of Distinct words are: "+countDistint;
+		//System.out.println("Number of Distinct words are: "+countDistint);
+		Logger.writeMessage(message, Distinct);
 	}
-	public void traverseInOrderCountCharacter(nodeModule1 root)
+	public void traverseInOrderCountDistinct(nodeModule1 root)
 	{
 		if(root != null)
 		{
-			traverseInOrderCountCharacter(root.left);
+			traverseInOrderCountDistinct(root.left);
 			countDistint++;
-			traverseInOrderCountCharacter(root.right);
+			traverseInOrderCountDistinct(root.right);
 		}
 	}
 }

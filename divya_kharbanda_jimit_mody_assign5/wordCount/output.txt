@@ -1,0 +1,5 @@
+Total number of words in Tree are: 13
+Number of Characters are: 37
+Number of Distinct words are: 7
+**********************************
+Total time taken: 8

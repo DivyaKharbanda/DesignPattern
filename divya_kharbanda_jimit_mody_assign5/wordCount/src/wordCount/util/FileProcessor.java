@@ -1,8 +1,11 @@
 package wordCount.util;
 
 import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import wordCount.util.Logger;
+import wordCount.util.Logger.DebugLevel;
 
 public class FileProcessor 
 {
@@ -15,6 +18,8 @@ public class FileProcessor
 	Scanner input;
 	int i=1;
 	String line;
+	DebugLevel FILE_PROCESSOR;
+	String message;
 	
 	public String ReadLine(String file_name) throws FileNotFoundException 
 	{
@@ -30,14 +35,17 @@ public class FileProcessor
 					{
 						String line;
 						line = input.next();
-						System.out.println("line is:"+line);
 						return line;
 					}
 			}
 			catch (Exception e) 
 			{
-				e.printStackTrace();
+				message = "File is empty!!";
+				Logger.writeMessage(message, FILE_PROCESSOR);
+				System.exit(0);
 			}
+		
+		
 		return null;
 	}
 	public void close()
